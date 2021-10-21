@@ -1,9 +1,9 @@
 <h1>Bem-vindo ao Task List!</h1>
-<p>Isto é uma página HTML</p>
-<em>Criada em <%= Date.today %></em>
+<p>Isto é uma página HTML<br>
+<em>Criada em <%= Date.today %></em></p>
 
-<%# "Isso é um comentário" %>
-<%= 'Mais que coisa mais chata, não consigo ver o resultado.' %>
-<%= 'Tem uma coisa me atrapalhando' %>
-<%= 1 + 3 %>
-<% 3 + 3 %>
+<ul type="circle"> <!-- Monta uma lista com os resultados de tasks -->
+<% @tasks.each do |task| %>
+        <li><%= task.description %>
+<% end %>
+</ul>
