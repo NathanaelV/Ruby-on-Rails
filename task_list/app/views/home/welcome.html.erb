@@ -1,6 +1,6 @@
 <h1>Bem-vindo ao Task List!</h1>
 <p>Isto é uma página HTML<br>
-<em>Criada em <%= Date.today %></em></p>
+<em>Hoje é dia: <%= Date.today %></em></p>
 
 <ul type="circle"> <!-- Monta uma lista com os resultados de tasks -->
 <% @tasks.each do |task| %>
@@ -8,9 +8,9 @@
         <!-- Caminho para editar esse objeto específico -->
         <%= link_to 'Editar', edit_task_path(task) %>
         <%= link_to 'Apagar', task_path(task), method: :delete, 
-            data: { confirm: 'Quer apagar esta tarefa?' } %>
+            data: { confirm: "Quer apagar esta tarefa: #{task.description}?" } %>
 <% end %>
 </ul>
 
 <!-- Redirecionar para a página de criação, para não precisar digitar o caminho -->
-<p>Adicionar um item a lista: <%= "link_to 'Nova Tarefa', (...) "%></p>
+<p>Adicionar um item a lista: <%= link_to 'Nova Tarefa', new_task_url %></p>
