@@ -5,5 +5,7 @@
 <ul type="circle"> <!-- Monta uma lista com os resultados de tasks -->
 <% @tasks.each do |task| %>
         <li><%= task.description %>
+        <!-- Caminho para editar esse objeto específico -->
+        <%= link_to 'Editar', edit_task_path(task) %>
 <% end %>
 </ul>
