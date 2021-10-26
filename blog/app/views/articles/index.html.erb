@@ -1,2 +1,13 @@
-<h1>Hello, Rails!!!</h1>
+<h1>Articles</h1>
 <p>Nice to see you here, thanks for come. Have a nice day.</p>
+
+<ul>
+    <% @articles.each do |article| %>
+        <li><%= article.title %>
+        <ul>
+            <li><%= article.body %>
+        </ul>
+    <% end %>
+</ul>
+
+
