@@ -21,6 +21,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def update
+    @article = Article.find(params[:id])
+    
+    if @article.update(article_params)
+      redirect_to
+    else
+      render :edit
+    end
+  end
+
   # Só eu vejo
   private
     def article_params
