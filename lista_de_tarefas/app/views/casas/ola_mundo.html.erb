@@ -1,3 +1,10 @@
 <h1>Lista de tarefas</h1>
-<p>Abrindo uma página no Browser</p>
 <em>Criado em <%= Date.today %></em>
+<h3>Sua lista de tarefas</h3>
+
+<ul>
+<% @tasks.each do |task| %>
+  <li><%= task.description %>
+<% end %>
+</ul>
+
