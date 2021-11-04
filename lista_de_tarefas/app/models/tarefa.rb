@@ -1,9 +1,2 @@
-class Tarefa
-  attr_reader :description, :status
-
-  def initialize(description, status = false)
-    @description = description
-    @status = status
-  end
+class Tarefa < ApplicationRecord
 end
-
