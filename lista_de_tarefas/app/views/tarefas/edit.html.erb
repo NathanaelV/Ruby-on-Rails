@@ -1,0 +1,11 @@
+<h2>Editando lista</h2>
+
+<%= form_for @tarefa_editada do |f| %>
+  <%= f.label :description, 'Descrição' %>
+  <%= f.text_field :description %>
+  <%= f.label :status, 'Status' %>
+  <%= f.check_box :status %>
+  <p><%= f.submit 'Editar' %></p>
+<% end %>
+
+<p><%= link_to 'Retornar ao Menu', root_path %>

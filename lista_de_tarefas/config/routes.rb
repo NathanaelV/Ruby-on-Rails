@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root to: 'casas#ola_mundo'
-
   get "/ola", to: "casas#ola_mundo"
+
+  resources :tarefas
 end
 
 
