@@ -1,18 +1,32 @@
 <h1>New Article</h1>
 
+<p><%= link_to "Articles Menu", root_path %></p>
+
+<%= render "form", article: @article %> 
+
+
+<!-- 
 <%= form_with model: @article do |form| %>
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
+    <% @article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+      <%= "Não Deixe o título em branco" %>
+    <% end %>
   </div>
 
-  <div>
+  <p>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
-  </div>
+    <% @article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>  
+  </p>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
 
+-->
