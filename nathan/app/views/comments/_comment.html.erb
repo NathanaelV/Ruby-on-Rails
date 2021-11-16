@@ -8,4 +8,10 @@
     <strong>Comment:</strong>
     <%= comment.body %>
   </div>
+
+  <div>
+    <%= link_to 'Destroy comment', [comment.article, comment], 
+                method: :delete, 
+                data: { confirm: "Are you sure that do you want to delete #{comment.commenter}'s comment?" } %>
+  </div>
 </p>
